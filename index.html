@@ -99,11 +99,13 @@
             </p>
             <div class="relative">
               <input
+                id="searchBox"
                 class="h-[56px] w-full rounded-full pl-4 text-black"
                 type="text"
                 placeholder="Search here anything"
               />
               <button
+                id="searchBtn"
                 class="absolute top-2 right-2 bg-[#797DFC] py-2 px-6 rounded-full text-sm text-white"
               >
                 Search
@@ -164,8 +166,7 @@
                   <p>Mark as read( <span>5</span>)</p>
                 </div>
               </div>
-              <div id="cardHandlerContainer">
-              </div>
+              <div id="cardHandlerContainer" class="px-1"></div>
             </div>
           </div>
         </div>
@@ -211,9 +212,10 @@
               integrated testing features allow for a streamlined .
             </p>
           </div>
-          <div id="newsContainer" class="mt-8 flex flex-col md:grid md:grid-cols-3 gap-6">
-
-          </div>
+          <div
+            id="newsContainer"
+            class="mt-8 flex flex-col md:grid md:grid-cols-3 gap-6"
+          ></div>
         </div>
       </section>
     </main>
