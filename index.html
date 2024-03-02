@@ -23,16 +23,16 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body class="font-['Mulish']">
-    <header class="mt-8 md:mt-10 lg:mt-12 w-[1170px] mx-auto">
-      <nav class="flex gap-4 justify-between items-center">
+    <header class="mt-8 md:mt-10 lg:mt-12 px-2 md:w-[1170px] mx-auto">
+      <nav class="flex gap-2 md:gap-4 justify-between items-center">
         <div>
           <h1 class="text-[#12132D] text-xl lg:text-3xl font-extrabold">
             ReTro
           </h1>
         </div>
-        <div class="flex gap-6 justify-between items-center">
+        <div class="flex gap-2 md:gap-6 justify-between items-center">
           <div
-            class="border border-gray-400 px-3 py-2 rounded-full bg-[#0307121A]"
+            class="border border-gray-400 px-2 md:px-3 py-1 md:py-2 rounded-full bg-[#0307121A]"
             data-te-toggle="tooltip"
             data-te-placement="bottom"
             data-te-ripple-init
@@ -42,7 +42,7 @@
             <i class="fa-solid fa-house"></i>
           </div>
           <div
-            class="border border-gray-400 px-3 py-2 rounded-full bg-[#0307121A]"
+            class="border border-gray-400 px-2 md:px-3 py-1 md:py-2 rounded-full bg-[#0307121A]"
             data-te-toggle="tooltip"
             data-te-placement="bottom"
             data-te-ripple-init
@@ -52,7 +52,7 @@
             <i class="fa-solid fa-pen"></i>
           </div>
           <div
-            class="border border-gray-400 px-3 py-2 rounded-full bg-[#0307121A]"
+            class="border border-gray-400 px-2 md:px-3 py-1 md:py-2 rounded-full bg-[#0307121A]"
             data-te-toggle="tooltip"
             data-te-placement="bottom"
             data-te-ripple-init
@@ -62,7 +62,7 @@
             <i class="fa-solid fa-user-plus"></i>
           </div>
           <div
-            class="border border-gray-400 px-3 py-2 rounded-full bg-[#0307121A]"
+            class="border border-gray-400 px-2 md:px-3 py-1 md:py-2 rounded-full bg-[#0307121A]"
             data-te-toggle="tooltip"
             data-te-placement="bottom"
             data-te-ripple-init
@@ -73,7 +73,7 @@
           </div>
           <div>
             <button
-              class="bg-[#797DFC] py-3 px-8 rounded-full text-sm text-white"
+              class="bg-[#797DFC] py-2 md:py-3 px-4 md:px-8 rounded-full text-sm text-white"
             >
               Sign In
             </button>
@@ -81,10 +81,10 @@
         </div>
       </nav>
     </header>
-    <main class="mt-14 w-[1170px] mx-auto">
+    <main class="mt-14 px-2 md:w-[1170px] mx-auto">
       <section class="bgImage">
         <div
-          class="flex gap-6 md:gap-8 lg:gap-12 justify-between items-center mx-10 md:mx-14 lg:mx-24 text-white py-24"
+          class="flex gap-6 md:gap-8 lg:gap-12 flex-col md:flex-row justify-between items-center mx-10 md:mx-14 lg:mx-24 text-white py-24"
         >
           <div class="space-y-6">
             <h1
@@ -147,7 +147,7 @@
               integrated testing features allow for a streamlined .
             </p>
           </div>
-          <div class="grid gap-6 grid-cols-12 mt-12">
+          <div class="flex flex-col md:grid gap-6 md:grid-cols-12 mt-12">
             <div
               class="col-span-8 bg-[#797DFC1A] grid grid-cols-12 rounded-lg md:rounded-2xl"
             >
@@ -216,7 +216,7 @@
       </section>
       <section class="mt-14 md:mt-20 lg:mt-24">
         <div
-          class="px-6 md:px-10 lg:p-12 py-14 flex justify-between gap-8 bg-[#12132D] rounded-xl"
+          class="px-6 md:px-10 lg:p-12 py-14 flex flex-col md:flex-row text-center md:text-start justify-between gap-8 bg-[#12132D] rounded-xl"
         >
           <div class="col-span-6 flex flex-col justify-center pr-10 space-y-5">
             <h3 class="text-3xl text-white font-extrabold">Join Our Forum</h3>
@@ -233,12 +233,11 @@
               </button>
             </div>
           </div>
-          <div>
+          <div class="flex justify-center">
             <img src="./images/joinforum.png" alt="" />
           </div>
         </div>
       </section>
-
       <section class="mt-14 md:mt-20 lg:mt-24">
         <div>
           <div class="space-y-5">
@@ -253,8 +252,10 @@
               integrated testing features allow for a streamlined .
             </p>
           </div>
-          <div class="mt-8 grid grid-cols-3 gap-6">
-            <div class="p-5 border border-[#12132D26] rounded-xl">
+          <div class="mt-8 flex flex-col md:grid md:grid-cols-3 gap-6">
+            <div
+              class="p-5 border border-[#12132D26] rounded-xl flex flex-col items-center md:items-start"
+            >
               <div><img src="" alt="" /></div>
               <div class="flex gap-4 items-center">
                 <i class="fa-regular fa-calendar"></i>
@@ -284,7 +285,7 @@
     </main>
 
     <footer>
-      <div class="py-14 md:py-24 text-center space-y-6">
+      <div class="py-14 px-2 md:py-24 text-center space-y-6">
         <h2 class="text-3xl font-extrabold text-[#12132D]">ReTro</h2>
         <p class="text-xs text-[#12132DB2]">
           Contrary to popular belief, Lorem Ipsum is not simply random text. It
@@ -314,7 +315,9 @@
         </div>
         <hr />
         <div>
-          <p class="text-[16px] text-[#12132D80] font-light">2017, All Rights Reserved.</p>
+          <p class="text-[16px] text-[#12132D80] font-light">
+            2017, All Rights Reserved.
+          </p>
         </div>
       </div>
     </footer>
