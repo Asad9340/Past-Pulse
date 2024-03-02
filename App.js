@@ -13,8 +13,7 @@ const displayAllPost = posts => {
     let isActive = '';
     if (post.isActive) {
       isActive = `<i class="fa-solid fa-circle absolute -top-1 -right-1 text-green-700"></i>`;
-    }
-    else {
+    } else {
       isActive = `<i class="fa-solid fa-circle absolute -top-1 -right-1 text-red-700"></i>`;
     }
     const div = document.createElement('div');
@@ -58,7 +57,7 @@ const displayAllPost = posts => {
                       <p><span>${post.posted_time}</span> min</p>
                     </div>
                     <div class="flex gap-3 items-center">
-                      <i class="fa-solid fa-envelope-open"></i>
+                      <button onclick="cardHandler('${post.title}','${post.view_count}')" class="bg-green-300 rounded-full px-3 py-2"><i class="fa-solid fa-envelope-open"></i></button>
                     </div>
                   </div>
                 </div>
@@ -66,5 +65,23 @@ const displayAllPost = posts => {
     `;
     allNewsContainer.appendChild(div);
   });
+};
+
+const cardHandler = (title,view_count) => {
+  console.log('btn clicked', title, view_count);
+  const cardHandlerContainer = document.getElementById('cardHandlerContainer');
+  const div = document.createElement('div');
+  div.innerHTML = `
+            <div
+                  class="flex gap-4 justify-between p-4 bg-white my-3 rounded-xl text-[16px] font-semibold"
+                >
+                  <div><h2>${title}</h2></div>
+                  <div class="flex gap-2 items-center">
+                    <i class="fa-solid fa-eye"></i>
+                    <p>${view_count}</p>
+                  </div>
+            </div>
+  `;
+  cardHandlerContainer.appendChild(div);
 };
 allPostAPI();
