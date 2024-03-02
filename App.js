@@ -10,14 +10,23 @@ const displayAllPost = posts => {
   const allNewsContainer = document.getElementById('allNewsContainer');
   posts.forEach(post => {
     console.log(post);
+    let isActive = '';
+    if (post.isActive) {
+      isActive = `<i class="fa-solid fa-circle absolute -top-1 -right-1 text-green-700"></i>`;
+    }
+    else {
+      isActive = `<i class="fa-solid fa-circle absolute -top-1 -right-1 text-red-700"></i>`;
+    }
     const div = document.createElement('div');
     div.innerHTML = `
                   <div
                 class="bg-[#797DFC1A] grid grid-cols-12 rounded-lg md:rounded-2xl"
               >
-                <div class="col-span-2 flex items-center justify-center relative">
+                <div class="col-span-2 flex items-center">
+                <div class="inline-block relative">
                   <img class="rounded-xl" src="${post.image}" alt="" />
-                  <i class="fa-solid fa-circle absolute top-[25%] right-0"></i>
+                  ${isActive}
+                </div>
                 </div>
                 <div class="col-span-10 p-4 md:p-10 space-y-5">
                   <div
