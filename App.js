@@ -18,7 +18,7 @@ const displayAllPost = posts => {
     const div = document.createElement('div');
     div.innerHTML = `
                   <div
-                class="bg-[#797DFC1A] grid grid-cols-12 rounded-lg md:rounded-2xl"
+                class="bg-[#797DFC1A] grid grid-cols-12 px-2 rounded-lg md:rounded-2xl"
               >
                 <div class="col-span-2 flex items-center">
                 <div class="inline-block relative">
@@ -97,7 +97,7 @@ const showLatestPost = data => {
     const div = document.createElement('div');
     div.innerHTML = `
                 <div
-              class="p-5 border border-[#12132D26] rounded-xl flex flex-col items-center md:items-start"
+              class="p-5 border border-[#12132D26] rounded-xl flex flex-col items-start"
             >
               <div><img class="rounded-xl mb-4" src="${
                 news.cover_image
