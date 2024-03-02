@@ -1,0 +1,7 @@
+.bgImage {
+  background: url('./images/bgbanner.png');
+  background-size: cover;
+  background-position: center;
+  background-color: #12132D;
+  border-radius: 20px;
+}
