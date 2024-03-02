@@ -136,7 +136,9 @@ const showLatestPost = data => {
 };
 
 const searchBtn = document.getElementById('searchBtn');
-searchBtn.addEventListener('click', async() => {
+searchBtn.addEventListener('click', async () => {
+  const spinner = document.getElementById('spinner');
+  spinner.classList.remove('hidden')
   const searchBox = document.getElementById('searchBox');
   if (
     searchBox.value == 'comedy' ||
@@ -145,13 +147,14 @@ searchBtn.addEventListener('click', async() => {
     searchBox.value == 'Coding'||
     searchBox.value == 'music'
   ) {
-    console.log('success');
     const res = await fetch(
       `https://openapi.programming-hero.com/api/retro-forum/posts?category=${searchBox.value}`
     );
     const data =await res.json();
-    console.log(data.posts);
-    displayAllPost(data.posts);
+    setTimeout(() => {
+      spinner.classList.add('hidden');
+      displayAllPost(data.posts);
+    },2000)
   } else {
     alert("You Entered a Wrong Keyword")
   }
