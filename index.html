@@ -22,8 +22,8 @@
 
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body class="font-['Mulish'] w-[1170px] mx-auto">
-    <header class="mt-8 md:mt-10 lg:mt-12">
+  <body class="font-['Mulish']">
+    <header class="mt-8 md:mt-10 lg:mt-12 w-[1170px] mx-auto">
       <nav class="flex gap-4 justify-between items-center">
         <div>
           <h1 class="text-[#12132D] text-xl lg:text-3xl font-extrabold">
@@ -81,7 +81,7 @@
         </div>
       </nav>
     </header>
-    <main class="mt-14">
+    <main class="mt-14 w-[1170px] mx-auto">
       <section class="bgImage">
         <div
           class="flex gap-6 md:gap-8 lg:gap-12 justify-between items-center mx-10 md:mx-14 lg:mx-24 text-white py-24"
@@ -98,7 +98,7 @@
             </p>
             <div class="relative">
               <input
-                class="h-[56px] w-full rounded-full pl-4"
+                class="h-[56px] w-full rounded-full pl-4 text-black"
                 type="text"
                 placeholder="Search here anything"
               />
@@ -242,22 +242,36 @@
       <section class="mt-14 md:mt-20 lg:mt-24">
         <div>
           <div class="space-y-5">
-            <h2 class="text-center text-2xl md:text-4xl text-[#12132D] font-extrabold">Latest Posts</h2>
-            <p class="text-[#12132D99] text-sm text-center">Yes, you can run unit tests and view the results directly within the app. The <br> integrated testing features allow for a streamlined .</p>
+            <h2
+              class="text-center text-2xl md:text-4xl text-[#12132D] font-extrabold"
+            >
+              Latest Posts
+            </h2>
+            <p class="text-[#12132D99] text-sm text-center">
+              Yes, you can run unit tests and view the results directly within
+              the app. The <br />
+              integrated testing features allow for a streamlined .
+            </p>
           </div>
           <div class="mt-8 grid grid-cols-3 gap-6">
-            <div class="p-5 border border-red-500 rounded-xl">
-              <div><img src="" alt=""></div>
+            <div class="p-5 border border-[#12132D26] rounded-xl">
+              <div><img src="" alt="" /></div>
               <div class="flex gap-4 items-center">
                 <i class="fa-regular fa-calendar"></i>
                 <p>29 January 2024</p>
               </div>
               <div class="space-y-3 my-4">
-                <h3 class="text-sm font-bold">What will a mars habitat force that impact in our daily life!!!</h3>
-                <p class="text-[16px] text-[#12132D99]">Yes, you can run unit tests and view the results directly within the app. </p>
+                <h3 class="text-sm font-bold">
+                  What will a mars habitat force that impact in our daily
+                  life!!!
+                </h3>
+                <p class="text-[16px] text-[#12132D99]">
+                  Yes, you can run unit tests and view the results directly
+                  within the app.
+                </p>
               </div>
               <div class="flex gap-4">
-                <div><img src="" alt=""></div>
+                <div><img class="rounded-full" src="" alt="" /></div>
                 <div>
                   <h4 class="text-[16px] text-[#12132D]">Asadul Islam</h4>
                   <p class="text-[14px] text-[#12132D99]">Unknown</p>
@@ -268,5 +282,41 @@
         </div>
       </section>
     </main>
+
+    <footer>
+      <div class="py-14 md:py-24 text-center space-y-6">
+        <h2 class="text-3xl font-extrabold text-[#12132D]">ReTro</h2>
+        <p class="text-xs text-[#12132DB2]">
+          Contrary to popular belief, Lorem Ipsum is not simply random text. It
+          has roots in a <br />piece of classical Latin literature from 45 BC
+        </p>
+        <div class="flex gap-6 justify-center">
+          <div>
+            <a href="https://github.com/Asad9340" target="_blank"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+          </div>
+          <div>
+            <a href="https://www.facebook.com/asad9340" target="_blank"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+          </div>
+          <div>
+            <a href="https://www.instagram.com/a_sa__d/" target="_blank"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+          </div>
+          <div>
+            <a href="https://twitter.com/asad9340" target="_blank"
+              ><i class="fa-brands fa-x-twitter"></i
+            ></a>
+          </div>
+        </div>
+        <hr />
+        <div>
+          <p class="text-[16px] text-[#12132D80] font-light">2017, All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
