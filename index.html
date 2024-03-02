@@ -82,6 +82,7 @@
       </nav>
     </header>
     <main class="mt-14 px-2 md:w-[1170px] mx-auto">
+      <!-- -----------------banner section----------------- -->
       <section class="bgImage">
         <div
           class="flex gap-6 md:gap-8 lg:gap-12 flex-col md:flex-row justify-between items-center mx-10 md:mx-14 lg:mx-24 text-white py-24"
@@ -133,6 +134,7 @@
           </div>
         </div>
       </section>
+      <!-- ------------lets discuss section / All post section--------------- -->
       <section class="mt-12 md:mt-16 lg:mt-20">
         <div>
           <div class="space-y-4">
@@ -147,53 +149,16 @@
               integrated testing features allow for a streamlined .
             </p>
           </div>
-          <div class="flex flex-col md:grid gap-6 md:grid-cols-12 mt-12">
+          <div
+            class="flex flex-col md:grid gap-4 md:place-items-start md:grid-cols-12 mt-12"
+          >
             <div
-              class="col-span-8 bg-[#797DFC1A] grid grid-cols-12 rounded-lg md:rounded-2xl"
+              id="allNewsContainer"
+              class="col-span-8 flex flex-col space-y-4"
+            ></div>
+            <div
+              class="col-span-4 bg-[#797DFC1A] p-4 rounded-xl"
             >
-              <div class="col-span-2">
-                <img src="" alt="" />
-                <i class="fa-solid fa-circle"></i>
-              </div>
-              <div class="col-span-10 p-4 md:p-10 space-y-5">
-                <div
-                  class="flex gap-6 text-[14px] text-[#12132DCC] font-medium"
-                >
-                  <p>#<span>music</span></p>
-                  <p>Author:<span> Asadul Islam</span></p>
-                </div>
-                <div>
-                  <h2 class="text-sm text-[#12132D] font-bold">
-                    10 Kids Unaware of Their Halloween Costume
-                  </h2>
-                  <p class="text-[16px] text-[#12132D99]">
-                    It’s one thing to subject yourself to ha Halloween costume
-                    mishap because, hey that’s your prerogative
-                  </p>
-                </div>
-                <hr class="text-black" />
-                <div
-                  class="flex gap-4 justify-between text-[16px] text-[#12132D99]"
-                >
-                  <div class="flex gap-3 items-center">
-                    <i class="fa-regular fa-comment"></i>
-                    <p>560</p>
-                  </div>
-                  <div class="flex gap-3 items-center">
-                    <i class="fa-solid fa-eye"></i>
-                    <p>1566</p>
-                  </div>
-                  <div class="flex gap-3 items-center">
-                    <i class="fa-regular fa-clock"></i>
-                    <p>5 min</p>
-                  </div>
-                  <div class="flex gap-3 items-center">
-                    <i class="fa-solid fa-envelope-open"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-span-4 bg-[#797DFC1A] p-4 rounded-xl">
               <div class="flex gap-5 justify-between">
                 <h3>Title</h3>
                 <div class="flex gap-2">
@@ -214,6 +179,8 @@
           </div>
         </div>
       </section>
+
+      <!-- -------------------join our forum section-------------- -->
       <section class="mt-14 md:mt-20 lg:mt-24">
         <div
           class="px-6 md:px-10 lg:p-12 py-14 flex flex-col md:flex-row text-center md:text-start justify-between gap-8 bg-[#12132D] rounded-xl"
@@ -238,6 +205,7 @@
           </div>
         </div>
       </section>
+      <!-- -----------------latest new section----------------- -->
       <section class="mt-14 md:mt-20 lg:mt-24">
         <div>
           <div class="space-y-5">
@@ -283,13 +251,13 @@
         </div>
       </section>
     </main>
-
+    <!-- ---------------------footer section----------------------- -->
     <footer>
       <div class="py-14 px-2 md:py-24 text-center space-y-6">
-        <h2 class="text-3xl font-extrabold text-[#12132D]">ReTro</h2>
+        <h2 class="text-xl md:text-3xl font-extrabold text-[#12132D]">ReTro</h2>
         <p class="text-xs text-[#12132DB2]">
-          Contrary to popular belief, Lorem Ipsum is not simply random text. It
-          has roots in a <br />piece of classical Latin literature from 45 BC
+          Back to the roots, forward to the stars. Reviving the past, embracing
+          the future.
         </p>
         <div class="flex gap-6 justify-center">
           <div>
@@ -321,5 +289,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="./App.js"></script>
   </body>
 </html>
