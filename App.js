@@ -1,3 +1,4 @@
+let count = 1;
 const allPostAPI = async () => {
   const res = await fetch(
     'https://openapi.programming-hero.com/api/retro-forum/posts'
@@ -8,7 +9,7 @@ const allPostAPI = async () => {
 
 const displayAllPost = posts => {
   const allNewsContainer = document.getElementById('allNewsContainer');
-  allNewsContainer.innerHTML=''
+  allNewsContainer.innerHTML = '';
   posts.forEach(post => {
     let isActive = '';
     if (post.isActive) {
@@ -68,6 +69,8 @@ const displayAllPost = posts => {
 };
 
 const cardHandler = (title, view_count) => {
+  const markReadCount = document.getElementById('markReadCount');
+  markReadCount.innerHTML = count++;
   const cardHandlerContainer = document.getElementById('cardHandlerContainer');
   const div = document.createElement('div');
   div.innerHTML = `
@@ -138,25 +141,25 @@ const showLatestPost = data => {
 const searchBtn = document.getElementById('searchBtn');
 searchBtn.addEventListener('click', async () => {
   const spinner = document.getElementById('spinner');
-  spinner.classList.remove('hidden')
+  spinner.classList.remove('hidden');
   const searchBox = document.getElementById('searchBox');
   if (
     searchBox.value == 'comedy' ||
     searchBox.value == 'Comedy' ||
-    searchBox.value == 'coding'||
-    searchBox.value == 'Coding'||
+    searchBox.value == 'coding' ||
+    searchBox.value == 'Coding' ||
     searchBox.value == 'music'
   ) {
     const res = await fetch(
       `https://openapi.programming-hero.com/api/retro-forum/posts?category=${searchBox.value}`
     );
-    const data =await res.json();
+    const data = await res.json();
     setTimeout(() => {
       spinner.classList.add('hidden');
       displayAllPost(data.posts);
-    },2000)
+    }, 2000);
   } else {
-    alert("You Entered a Wrong Keyword")
+    alert('You Entered a Wrong Keyword');
   }
 });
 latestPost();
