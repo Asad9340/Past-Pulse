@@ -38,7 +38,7 @@ const displayAllPost = posts => {
                   ${isActive}
                 </div>
                 </div>
-                <div class="col-span-10 p-4 md:p-10 space-y-5">
+                <div class="col-span-10 p-4  space-y-5">
                   <div
                     class="flex gap-6 text-[14px] text-[#12132DCC] font-medium"
                   >
