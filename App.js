@@ -10,7 +10,9 @@ const allPostAPI = async () => {
     'https://openapi.programming-hero.com/api/retro-forum/posts'
   );
   const data = await res.json();
-  displayAllPost(data.posts);
+  setTimeout(() => {
+    displayAllPost(data.posts);
+  }, 2000);
 };
 
 const displayAllPost = posts => {
@@ -110,7 +112,9 @@ const latestPost = async () => {
     'https://openapi.programming-hero.com/api/retro-forum/latest-posts'
   );
   const data = await res.json();
-  showLatestPost(data);
+  setTimeout(() => {
+    showLatestPost(data);
+  }, 2000);
 };
 const showLatestPost = data => {
   const newsContainer = document.getElementById('newsContainer');
