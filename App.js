@@ -56,15 +56,15 @@ const displayAllPost = posts => {
                     class="flex gap-4 justify-between text-[16px] text-[#12132D99]"
                   >
                     <div class="flex gap-2 md:gap-4 lg:gap-6 justify-between">
-                      <div class="flex gap-2 items-center text-xs md:text-sm lg:text-base">
+                      <div class="flex gap-2 items-center text-sm lg:text-base">
                       <i class="fa-regular fa-comment"></i>
                       <p>${post.comment_count}</p>
                       </div>
-                      <div class="flex gap-2 items-center text-xs md:text-sm lg:text-base">
+                      <div class="flex gap-2 items-center text-sm lg:text-base">
                       <i class="fa-solid fa-eye"></i>
                       <p>${post.view_count}</p>
                       </div>
-                      <div class="flex gap-2 items-center text-xs md:text-sm lg:text-base">
+                      <div class="flex gap-2 items-center text-sm lg:text-base">
                       <i class="fa-regular fa-clock"></i>
                       <p><span>${post.posted_time}</span> min</p>
                       </div>
