@@ -1,5 +1,11 @@
 let count = 1;
+const spinner = document.getElementById('spinner');
+
+
+
+
 const allPostAPI = async () => {
+  spinner.classList.remove('hidden');
   const res = await fetch(
     'https://openapi.programming-hero.com/api/retro-forum/posts'
   );
@@ -17,6 +23,7 @@ const displayAllPost = posts => {
     } else {
       isActive = `<i class="fa-solid fa-circle absolute -top-1 -right-1 text-red-700"></i>`;
     }
+    spinner.classList.add('hidden');
     const div = document.createElement('div');
     div.innerHTML = `
                   <div
@@ -140,7 +147,6 @@ const showLatestPost = data => {
 
 const searchBtn = document.getElementById('searchBtn');
 searchBtn.addEventListener('click', async () => {
-  const spinner = document.getElementById('spinner');
   spinner.classList.remove('hidden');
   const searchBox = document.getElementById('searchBox');
   if (
