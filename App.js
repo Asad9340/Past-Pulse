@@ -1,5 +1,6 @@
 let count = 1;
 const spinner = document.getElementById('spinner');
+const spinner2 = document.getElementById('spinner2');
 const parentDiv = document.getElementById('parentDiv');
 
 const allPostAPI = async () => {
@@ -74,7 +75,7 @@ const displayAllPost = posts => {
                         '@'
                       )}','${
       post.view_count
-    }')" class="bg-green-300 rounded-full px-3 py-2"><i class="fa-solid fa-envelope-open"></i></button>
+    }')" class="bg-green-300 hover:bg-green-500 hover:duration-300 rounded-full px-3 py-2"><i class="fa-solid fa-envelope-circle-check"></i></button>
                     </div>
                   </div>
                 </div>
@@ -104,6 +105,7 @@ const cardHandler = (title, view_count) => {
 };
 
 const latestPost = async () => {
+  spinner2.classList.remove('hidden');
   const res = await fetch(
     'https://openapi.programming-hero.com/api/retro-forum/latest-posts'
   );
@@ -113,6 +115,7 @@ const latestPost = async () => {
 const showLatestPost = data => {
   const newsContainer = document.getElementById('newsContainer');
   data.forEach(news => {
+    spinner2.classList.add('hidden');
     const div = document.createElement('div');
     div.innerHTML = `
                 <div
