@@ -21,20 +21,20 @@ const displayAllPost = posts => {
   posts.forEach(post => {
     let isActive = '';
     if (post.isActive) {
-      isActive = `<i class="fa-solid fa-circle absolute -top-1 -right-1 text-green-700"></i>`;
+      isActive = `<i class="fa-solid fa-circle absolute top-0 right-4 text-xs text-green-700"></i>`;
     } else {
-      isActive = `<i class="fa-solid fa-circle absolute -top-1 -right-1 text-red-700"></i>`;
+      isActive = `<i class="fa-solid fa-circle absolute top-0 right-4 text-xs text-red-700"></i>`;
     }
     spinner.classList.add('hidden');
     parentDiv.classList.remove('hidden');
     const div = document.createElement('div');
     div.innerHTML = `
                   <div
-                class="bg-[#F3F3F5] hover:bg-[#7D79FC1A] border border-white hover:border hover:border-[#797DFC] duration-500 grid grid-cols-12 px-2 rounded-lg md:rounded-2xl"
+                class="bg-[#F3F3F5] hover:bg-[#7D79FC1A] border border-white hover:border hover:border-[#797DFC] duration-500 grid grid-cols-1 md:grid-cols-12 px-2 rounded-lg md:rounded-2xl"
               >
-                <div class="col-span-2 flex items-center">
-                <div class="inline-block relative">
-                  <img class="rounded-xl" src="${post.image}" alt="" />
+                <div class="col-span-2 flex items-center justify-center mt-3 md:mt-0">
+                <div class="inline-block relative ">
+                  <img class="rounded-full w-24" src="${post.image}" alt="" />
                   ${isActive}
                 </div>
                 </div>
@@ -166,13 +166,12 @@ searchBtn.addEventListener('click', async () => {
   const parentDiv = document.getElementById('parentDiv');
   parentDiv.classList.add('hidden');
   spinner.classList.remove('hidden');
-  const searchBox = document.getElementById('searchBox');
+  let searchBox = document.getElementById('searchBox');
+  searchBoxValue = searchBox.value.toLowerCase();
   if (
-    searchBox.value == 'comedy' ||
-    searchBox.value == 'Comedy' ||
-    searchBox.value == 'coding' ||
-    searchBox.value == 'Coding' ||
-    searchBox.value == 'music'
+    searchBoxValue === 'comedy' ||
+    searchBoxValue === 'coding' ||
+    searchBoxValue === 'music'
   ) {
     const res = await fetch(
       `https://openapi.programming-hero.com/api/retro-forum/posts?category=${searchBox.value}`
@@ -184,9 +183,10 @@ searchBtn.addEventListener('click', async () => {
       displayAllPost(data.posts);
     }, 2000);
   } else {
-    alert('You Entered a Wrong Keyword');
+    alert('Enter value like comedy,music coding...');
     setTimeout(() => {
       spinner.classList.add('hidden');
+      allPostAPI();
     }, 2000);
   }
 });
