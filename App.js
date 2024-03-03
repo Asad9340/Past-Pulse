@@ -1,11 +1,10 @@
 let count = 1;
 const spinner = document.getElementById('spinner');
-
-
-
+const parentDiv = document.getElementById('parentDiv');
 
 const allPostAPI = async () => {
   spinner.classList.remove('hidden');
+  parentDiv.classList.add('hidden');
   const res = await fetch(
     'https://openapi.programming-hero.com/api/retro-forum/posts'
   );
@@ -24,6 +23,7 @@ const displayAllPost = posts => {
       isActive = `<i class="fa-solid fa-circle absolute -top-1 -right-1 text-red-700"></i>`;
     }
     spinner.classList.add('hidden');
+    parentDiv.classList.remove('hidden');
     const div = document.createElement('div');
     div.innerHTML = `
                   <div
@@ -147,6 +147,8 @@ const showLatestPost = data => {
 
 const searchBtn = document.getElementById('searchBtn');
 searchBtn.addEventListener('click', async () => {
+  const parentDiv = document.getElementById('parentDiv');
+  parentDiv.classList.add('hidden');
   spinner.classList.remove('hidden');
   const searchBox = document.getElementById('searchBox');
   if (
@@ -162,10 +164,14 @@ searchBtn.addEventListener('click', async () => {
     const data = await res.json();
     setTimeout(() => {
       spinner.classList.add('hidden');
+      parentDiv.classList.remove('hidden');
       displayAllPost(data.posts);
     }, 2000);
   } else {
     alert('You Entered a Wrong Keyword');
+    setTimeout(() => {
+      spinner.classList.add('hidden');
+    }, 2000);
   }
 });
 latestPost();
