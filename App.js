@@ -65,7 +65,7 @@ const displayAllPost = posts => {
                       <p><span>${post.posted_time}</span> min</p>
                     </div>
                     <div class="flex gap-3 items-center">
-                      <button onclick="cardHandler('${post.title}','${post.view_count}')" class="bg-green-300 rounded-full px-3 py-2"><i class="fa-solid fa-envelope-open"></i></button>
+                      <button onclick="cardHandler('${post.title.replace("'","@")}','${post.view_count}')" class="bg-green-300 rounded-full px-3 py-2"><i class="fa-solid fa-envelope-open"></i></button>
                     </div>
                   </div>
                 </div>
@@ -84,7 +84,7 @@ const cardHandler = (title, view_count) => {
             <div
                   class="flex gap-4 justify-between p-4 bg-white my-3 rounded-xl text-[16px] font-semibold"
                 >
-                  <div><h2>${title}</h2></div>
+                  <div><h2>${title.replace('@', "'")}</h2></div>
                   <div class="flex gap-2 items-center">
                     <i class="fa-solid fa-eye"></i>
                     <p>${view_count}</p>
