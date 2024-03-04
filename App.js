@@ -46,10 +46,10 @@ const displayAllPost = posts => {
                     <p>Author: <span>${post.author.name}</span></p>
                   </div>
                   <div>
-                    <h2 class="text-sm text-[#12132D] font-bold">
+                    <h2 class="text-base text-[#12132D] font-bold">
                       ${post.title}
                     </h2>
-                    <p class="text-[16px] text-[#12132D99]">${
+                    <p class="text-sm text-[#12132D99]">${
                       post.description
                     }</p>
                   </div>
