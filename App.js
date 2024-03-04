@@ -49,11 +49,9 @@ const displayAllPost = posts => {
                     <h2 class="text-base text-[#12132D] font-bold">
                       ${post.title}
                     </h2>
-                    <p class="text-sm text-[#12132D99]">${
-                      post.description
-                    }</p>
+                    <p class="text-sm text-[#12132D99]">${post.description}</p>
                   </div>
-                  <hr class="text-black" />
+                  <hr class="border-dashed border-[#12132D40]" />
                   <div
                     class="flex gap-4 justify-between text-[16px] text-[#12132D99]"
                   >
